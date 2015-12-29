@@ -1,15 +1,16 @@
 $background-color: #e9e9e9;
-$main-color: #444;
+$main-color: #2f5c7d;
 
 body {
   background-color: $background-color;
   color: $main-color;
+  font-family: "Roboto", SansSerif;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: stretch;
   position: fixed;
   top: 0px;
@@ -21,17 +22,42 @@ body {
 }
 
 .header {
-  flex: 0 0 120px;
+  color: lighten($main-color, 20%);
+  flex: 0 0 auto;
   text-align: center;
 }
 
 .main {
   flex: 1 0 auto;
   text-align: center;
+  .countdown {
+    @media (min-width: 480px) {
+      font-size: 4em;
+    }
+
+    @media (min-width: 720px) {
+      font-size: 6em;
+    }
+
+    @media (min-width: 960px) {
+      font-size: 8em;
+    }
+  }
 }
 
 .footer {
   text-align: center;
-  flex: 0 0 120px;
-  background-color: darken($background-color, 10%);
+  flex: 0 0 auto;
+
+  padding:20px;
+
+  color: darken($background-color, 10%);
+  background-color: darken($main-color, 10%);
+  a {
+    color: lighten($background-color, 10%);
+
+    &:hover {
+      color: darken($background-color, 10%);
+    }
+  }
 }
