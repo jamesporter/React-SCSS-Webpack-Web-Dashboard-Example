@@ -36,7 +36,8 @@ export const App = React.createClass({
             </div>
 
             <div className="main">
-              <h1 className="countdown">{days} days {hours}:{minutes}:{seconds}</h1>
+                <h1 className="countdown">{days} days {hours}:{minutes}:{seconds}</h1>
+                <h2>Until {this.state.countdownTo.getFullYear()}</h2>
             </div>
 
             <div className="footer">
